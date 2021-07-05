@@ -1,6 +1,8 @@
 # Collections
 
 ## What?
+Started to exist in J2SE 1.2 - Year 1998  
+
 Framework - predefined Architecture.  
 predefined factory.  
 pre-made classes and interfaces for us to use.  
