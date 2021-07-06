@@ -49,6 +49,7 @@ public class HashSetExample {
         remove.add(simon);
         remove.add(erik);
         remove.add("Ulf");
+        remove.add("sadasd");
 
         //Removing all matching elements in lexiconOffice
         lexiconOffices.removeAll(remove);

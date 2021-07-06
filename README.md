@@ -1,4 +1,7 @@
 # Collections
+ 
+> Feel free to read and look at the topics found here.  
+> http://tutorials.jenkov.com/java-collections/index.html
 
 ## What?
 Started to exist in J2SE 1.2 - Year 1998  

@@ -1,9 +1,8 @@
 package se.lexion.simon;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import se.lexion.simon.model.Person;
+
+import java.util.*;
 
 public class ArrayListExample {
 
@@ -15,7 +14,7 @@ public class ArrayListExample {
      */
 
     public static void main(String[] args) {
-        ex3();
+        ex5();
     }
 
     public static void ex1(){
@@ -45,6 +44,7 @@ public class ArrayListExample {
         // Traversing list through Iterator
         // when we want to remove elements we should use Iterator
         // iterator is more efficient when we want to try to modify a collection
+        //http://tutorials.jenkov.com/java-collections/iterable.html
         Iterator<Integer> iterator = numbers.iterator();
         while(iterator.hasNext()){
             int num = iterator.next();
@@ -100,7 +100,53 @@ public class ArrayListExample {
         String name2 = (String) objects[1];
         System.out.println("name2 = " + name2);
 
+    }
 
+    public static void ex4(){
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(1000);
+        numbers.add(10);
+        numbers.add(10000);
+        numbers.add(20);
+
+        System.out.println(numbers);
+
+        System.out.println("Sorting");
+        Collections.sort(numbers);
+        System.out.println(numbers);
+
+        System.out.println("A".compareTo("B"));
+
+    }
+
+    public static void ex5(){
+        ArrayList<Person> persons = new ArrayList<>();
+        persons.add(new Person(1,"Simon","simon@lex.se",24));
+        persons.add(new Person(3,"Ulf","ulf@lex.se",39));
+        persons.add(new Person(2,"Erik", "eric@lex.se", 35));
+
+        System.out.println("persons = " + persons);
+
+        Collections.sort(persons);
+
+        //By Name
+        Collections.sort(persons, new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                return p1.getName().compareTo(p2.getName());
+            }
+        });
+
+        //By Email
+        Collections.sort(persons, new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.getEmail().compareTo(o2.getEmail());
+            }
+        });
+
+        System.out.println("persons = " + persons);
     }
 
 
